@@ -1,0 +1,13 @@
+# Configuração para publicação gratuita no Netlify
+# Como o site é estático (HTML/CSS/JS puro), não há build.
+[build]
+  publish = "."
+  command = ""
+
+# Cabeçalhos de segurança básicos (boa prática, sem custo)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
